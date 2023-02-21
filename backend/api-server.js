@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
 
 const secret_key = "abc1234567";
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cookieParser());
 
 const members = [
